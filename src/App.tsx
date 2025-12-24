@@ -1,5 +1,5 @@
 function App() {
-  return <p>TeeRex Store</p>;
+    return <p>TeeRex Store</p>;
 }
 
 export default App;
