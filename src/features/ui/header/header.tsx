@@ -1,19 +1,19 @@
+import CartIcon from "../icons/CartIcon";
+import "./header.css";
+
 export function Header() {
     return (
         <header className="header">
-            <h3>TeeRex Store</h3>
-            <nav className="header-nav">
-                {/* <NavLink to="/" className="header-nav-link">
-                    Products
-                </NavLink>
+            <div className="header-inner">
+                <h3 className="header-title">TeeRex Store</h3>
 
-                <NavLink to="/cart" className="header-nav-link">
-                    <CartIcon />
-                    {cartQuantity > 0 && (
-                        <span className="cart-badge">{cartQuantity}</span>
-                    )}
-                </NavLink> */}
-            </nav>
+                <nav className="header-nav">
+                    <div className="header-nav-link">
+                        <CartIcon />
+                        {/* <span className="header-cart-badge">2</span> */}
+                    </div>
+                </nav>
+            </div>
         </header>
     );
 }
