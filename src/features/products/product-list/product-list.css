@@ -1,0 +1,26 @@
+.product-page {
+    display: flex;
+    gap: var(--space-lg);
+}
+
+.product-page-content {
+    flex: 1;
+    padding: 0 var(--space-md);
+    min-width: 0;
+}
+
+.loading-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+    width: 100%;
+    padding: var(--space-lg);
+    color: var(--color-gray-700);
+}
+
+.product-list {
+    display: grid;
+    gap: 28px;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+}
