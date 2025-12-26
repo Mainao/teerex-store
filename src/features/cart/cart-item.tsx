@@ -1,5 +1,5 @@
-import { useShoppingCart } from "./cart-context";
 import type { CartItem } from "./types";
+import { useShoppingCart } from "./cart-context";
 import { Button } from "../ui/button";
 import "./cart.css";
 

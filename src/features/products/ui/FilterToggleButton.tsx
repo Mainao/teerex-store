@@ -1,6 +1,6 @@
-import { Button } from "@/features/ui/button";
 import { useProductFilters } from "../product-filters/product-filters-context";
 import FilterIcon from "@/features/ui/icons/FilterIcon";
+import { Button } from "@/features/ui/button";
 import "./filter-toggle-button.css";
 
 export function FilterToggleButton() {

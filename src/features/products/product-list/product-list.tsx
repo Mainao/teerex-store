@@ -6,8 +6,8 @@ import {
     collectFilters,
     multiPropsFilter,
 } from "../utils/product-filter-utils";
-import "./product-list.css";
 import { ProductItem } from "./product-item";
+import "./product-list.css";
 
 export function ProductList() {
     const { products, loading, error } = useProductList();

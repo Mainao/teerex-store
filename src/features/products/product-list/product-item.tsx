@@ -1,6 +1,6 @@
-import { Button } from "@/features/ui/button";
-import { useShoppingCart } from "@/features/cart/cart-context";
 import type { Product } from "../types";
+import { useShoppingCart } from "@/features/cart/cart-context";
+import { Button } from "@/features/ui/button";
 import "./product-item.css";
 
 interface ProductItemProps {

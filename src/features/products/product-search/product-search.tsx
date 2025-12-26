@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { useProductSearch } from "./product-search-context";
-import "./product-search.css";
 import { Button } from "@/features/ui/button";
 import SearchIcon from "@/features/ui/icons/SearchIcon";
+import "./product-search.css";
 
 export function ProductSearch() {
     const { setSearchTerm } = useProductSearch();

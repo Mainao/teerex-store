@@ -1,5 +1,5 @@
-import { Checkbox } from "@/features/ui/checkbox";
 import { useProductFilters } from "./product-filters-context";
+import { Checkbox } from "@/features/ui/checkbox";
 import "./product-filters.css";
 
 export function ProductFilters() {
