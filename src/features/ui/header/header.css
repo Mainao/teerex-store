@@ -65,6 +65,21 @@
     justify-content: center;
 }
 
+.cart-badge {
+    background: #ff3b3b;
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 2px 6px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -6px;
+    right: -14px;
+}
+
 @media (max-width: 768px) {
     .header-inner {
         padding: var(--space-sm) var(--space-md);

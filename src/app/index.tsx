@@ -1,8 +1,9 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import AppLayout from "@/layouts/AppLayout";
 import ProductsPage from "@/pages/products";
+import CartPage from "@/pages/cart";
 import ErrorFallback from "@/pages/error";
-// import CartPage from "@/pages/cart";
+import { CartProvider } from "@/features/cart/cart-context";
 
 const router = createBrowserRouter([
     {
@@ -11,8 +12,12 @@ const router = createBrowserRouter([
         errorElement: <ErrorFallback />,
         children: [
             {
-                index: true,
+                path: "/",
                 element: <ProductsPage />,
+            },
+            {
+                path: "/cart",
+                element: <CartPage />,
             },
         ],
     },
@@ -21,7 +26,9 @@ const router = createBrowserRouter([
 export default function App() {
     return (
         <>
-            <RouterProvider router={router} />
+            <CartProvider>
+                <RouterProvider router={router} />
+            </CartProvider>
         </>
     );
 }

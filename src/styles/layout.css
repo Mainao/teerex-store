@@ -22,3 +22,12 @@
     flex: 1;
     min-width: 0;
 }
+
+.error-fallback {
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 64px;
+    text-align: center;
+}

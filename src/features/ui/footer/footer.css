@@ -1,12 +1,12 @@
 .footer {
     width: 100%;
-    padding: 16px 0;
+    padding: var(--space-md) 0;
     text-align: center;
-    background: #f9f9f9;
-    margin-top: 40px;
+    background: var(--color-surface-muted);
+    margin-top: var(--space-xl);
 }
 
 .footer-text {
-    font-size: 0.9rem;
-    color: #555;
+    font-size: var(--font-sm);
+    color: var(--color-text-secondary);
 }

@@ -10,7 +10,7 @@ export type Product = {
 };
 
 export type ProductFilterState = {
-    color: Record<string, boolean>;
+    colour: Record<string, boolean>;
     gender: Record<string, boolean>;
     type: Record<string, boolean>;
     priceRange: Record<string, boolean>;

@@ -1,4 +1,4 @@
-import Checkbox from "@/features/ui/checkbox/checkbox";
+import { Checkbox } from "@/features/ui/checkbox";
 import { useProductFilters } from "./product-filters-context";
 import "./product-filters.css";
 
@@ -19,9 +19,9 @@ export function ProductFilters() {
                 </div>
 
                 <FilterSection
-                    title="Color"
-                    values={filters.color}
-                    onToggle={(v) => toggleFilter("color", v)}
+                    title="Colour"
+                    values={filters.colour}
+                    onToggle={(v) => toggleFilter("colour", v)}
                 />
 
                 <FilterSection

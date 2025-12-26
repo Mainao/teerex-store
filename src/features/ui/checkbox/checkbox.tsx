@@ -1,5 +1,5 @@
 import React from "react";
-import "./Checkbox.css";
+import "./checkbox.css";
 
 type CheckboxProps = {
     label: string;
@@ -8,12 +8,7 @@ type CheckboxProps = {
     onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 };
 
-export default function Checkbox({
-    label,
-    name,
-    checked,
-    onChange,
-}: CheckboxProps) {
+export function Checkbox({ label, name, checked, onChange }: CheckboxProps) {
     return (
         <label className="checkbox">
             <input

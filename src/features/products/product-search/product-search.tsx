@@ -16,6 +16,7 @@ export function ProductSearch() {
         <div className="search-bar">
             <input
                 type="text"
+                name="search"
                 placeholder="Search products..."
                 value={term}
                 onChange={(e) => setTerm(e.target.value)}
@@ -28,7 +29,11 @@ export function ProductSearch() {
                 }}
             />
 
-            <Button size="md" onClick={handleSubmit}>
+            <Button
+                size="md"
+                className="search-button-container"
+                onClick={handleSubmit}
+            >
                 <SearchIcon />
             </Button>
         </div>

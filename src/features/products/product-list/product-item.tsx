@@ -1,4 +1,5 @@
 import { Button } from "@/features/ui/button";
+import { useShoppingCart } from "@/features/cart/cart-context";
 import type { Product } from "../types";
 import "./product-item.css";
 
@@ -7,6 +8,20 @@ interface ProductItemProps {
 }
 
 export function ProductItem({ product }: ProductItemProps) {
+    const { getItemQuantity, increaseCartQuantity, decreaseCartQuantity } =
+        useShoppingCart();
+
+    const productQuantity = getItemQuantity(product.id);
+
+    const cartProduct = {
+        id: product.id,
+        name: product.name,
+        price: product.price,
+        imageURL: product.imageURL,
+        quantity: product.quantity,
+        productQuantity: 1,
+    };
+
     return (
         <div className="product-card">
             <div className="product-card-image-wrapper">
@@ -28,7 +43,40 @@ export function ProductItem({ product }: ProductItemProps) {
                     </div>
 
                     <div className="product-card-actions">
-                        <Button size="sm">Add to cart</Button>
+                        {productQuantity === 0 ? (
+                            <Button
+                                size="sm"
+                                onClick={() =>
+                                    increaseCartQuantity(cartProduct)
+                                }
+                            >
+                                Add to cart
+                            </Button>
+                        ) : (
+                            <div className="product-card-quantity">
+                                <Button
+                                    size="sm"
+                                    variant="secondary"
+                                    onClick={() =>
+                                        decreaseCartQuantity(product.id)
+                                    }
+                                >
+                                    −
+                                </Button>
+
+                                <span>{productQuantity}</span>
+
+                                <Button
+                                    size="sm"
+                                    variant="secondary"
+                                    onClick={() =>
+                                        increaseCartQuantity(cartProduct)
+                                    }
+                                >
+                                    +
+                                </Button>
+                            </div>
+                        )}
                     </div>
                 </div>
             </div>

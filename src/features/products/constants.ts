@@ -2,7 +2,7 @@ export const PRODUCTS_URL =
     "https://geektrust.s3.ap-southeast-1.amazonaws.com/coding-problems/shopping-cart/catalogue.json";
 
 export const INITIAL_FILTERS = {
-    color: {
+    colour: {
         Black: false,
         Blue: false,
         Pink: false,
