@@ -5,6 +5,7 @@ import {
 import { ProductList } from "@/features/products/product-list";
 import { ProductSearch } from "@/features/products/product-search/product-search";
 import { ProductSearchProvider } from "@/features/products/product-search/product-search-context";
+import { FilterToggleButton } from "@/features/products/ui/FilterToggleButton";
 
 export default function ProductsPage() {
     return (
@@ -13,12 +14,11 @@ export default function ProductsPage() {
                 <section className="products-page">
                     <div className="products-search">
                         <ProductSearch />
+                        <FilterToggleButton />
                     </div>
 
                     <div className="products-layout">
-                        <aside className="products-filters">
-                            <ProductFilters />
-                        </aside>
+                        <ProductFilters />
 
                         <main className="products-content">
                             <ProductList />

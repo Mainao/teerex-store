@@ -13,12 +13,9 @@
 .products-search {
     display: flex;
     justify-content: flex-end;
+    gap: var(--space-sm);
+    padding: 0 var(--space-md);
     margin-bottom: var(--space-lg);
-}
-
-.products-filters {
-    width: 260px;
-    flex-shrink: 0;
 }
 
 .products-content {

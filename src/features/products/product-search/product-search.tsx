@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useProductSearch } from "./product-search-context";
 import "./product-search.css";
 import { Button } from "@/features/ui/button";
+import SearchIcon from "@/features/ui/icons/SearchIcon";
 
 export function ProductSearch() {
     const { setSearchTerm } = useProductSearch();
@@ -28,7 +29,7 @@ export function ProductSearch() {
             />
 
             <Button size="md" onClick={handleSubmit}>
-                Search
+                <SearchIcon />
             </Button>
         </div>
     );

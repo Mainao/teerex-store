@@ -1,0 +1,11 @@
+.filter-toggle-btn {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .filter-toggle-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

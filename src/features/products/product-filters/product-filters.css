@@ -1,3 +1,8 @@
+.product-page-filters {
+    width: 260px;
+    flex-shrink: 0;
+}
+
 .filter-panel {
     background: var(--color-white);
     border-radius: var(--radius-md);
@@ -51,7 +56,49 @@
 }
 
 @media (max-width: 768px) {
+    /* =====================
+     Filters Container
+  ===================== */
+
+    .product-page-filters {
+        display: none;
+    }
+
+    .product-page-filters.visible {
+        display: block;
+        position: fixed;
+        inset: 0 auto 0 0;
+
+        width: 320px;
+        max-width: 85vw;
+        height: 100vh;
+
+        background: var(--color-white);
+        z-index: 1000;
+
+        padding: var(--space-md);
+        overflow-y: auto;
+
+        box-shadow: 4px 0 12px rgba(0, 0, 0, 0.12);
+    }
+
+    /* =====================
+     Panel Adjustments
+  ===================== */
+
+    .filter-panel {
+        position: static;
+        box-shadow: none;
+        border: none;
+        padding: 0;
+    }
+
+    /* =====================
+     Close Button
+  ===================== */
+
     .filter-close-btn {
         display: inline-flex;
+        margin-left: auto;
     }
 }
